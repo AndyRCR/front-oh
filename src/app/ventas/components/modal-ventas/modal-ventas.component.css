@@ -1,0 +1,23 @@
+.modalBodyHeader{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 16px;
+}
+
+.modalInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.modalBodyTable{
+    border-bottom: 1px solid #d9e2ef;
+    border-top: 1px solid #d9e2ef;
+    padding: 10px 0;
+    margin: 20px 0;
+}

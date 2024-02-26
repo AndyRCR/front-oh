@@ -1,0 +1,84 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Detalles de la Venta</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modalBodyHeader">
+
+        <div class="modalInfo">
+            <div class="title">Nombres</div>
+            <div class="info">{{cliente?.nombres}}</div>
+        </div>
+
+        <div class="modalInfo">
+            <div class="title">Apellidos</div>
+            <div class="info">{{cliente?.apellidos}}</div>
+        </div>
+
+        <div class="modalInfo">
+            <div class="title">DNI</div>
+            <div class="info">{{cliente?.dni}}</div>
+        </div>
+
+        <div class="modalInfo">
+            <div class="title">Telefono</div>
+            <div class="info">{{cliente?.telefono}}</div>
+        </div>
+
+        <div class="modalInfo">
+            <div class="title">Email</div>
+            <div class="info">{{cliente?.email}}</div>
+        </div>
+    </div>
+
+    <div class="modalBodyTable">
+        <ngx-datatable
+            [rows]="detalleVenta"
+            [columnMode]="ColumnMode.force"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="50"
+            rowHeight="auto"
+        >
+            <ngx-datatable-column name="Producto">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row.productoDTO.nombre }}
+                </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="Precio unitario">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row.productoDTO.precio }}
+                </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="Cantidad">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row.cantidad }}
+                </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="SubTotal">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    S/ {{ toFloat(row.cantidad * row.productoDTO.precio)}}
+                </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
+    </div>
+
+    <div class="modalBodyHeader">
+        <div class="modalInfo">
+            <div class="title">Fecha</div>
+            <div class="info">{{resumenVenta?.fecha}}</div>
+        </div>
+        <div class="modalInfo">
+            <div class="title">Total</div>
+            <div class="info">S/ {{resumenVenta?.total}}</div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{ closeBtnName }}</button>
+  </div>

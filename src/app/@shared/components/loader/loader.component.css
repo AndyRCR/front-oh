@@ -1,0 +1,42 @@
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.loaderLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+}
+
+.loaderLogo img {
+    width: 100%;
+}
+
+.loader {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #F11F0D;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

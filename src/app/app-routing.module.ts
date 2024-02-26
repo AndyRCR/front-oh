@@ -1,10 +1,24 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '**',
+    redirectTo: 'ventas',
+    pathMatch: 'full'
+  },
+  {
+    path: 'ventas',
+    loadChildren: () => import('./ventas/ventas.module').then( m => m.VentasModule)
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules,
+    scrollPositionRestoration: 'enabled'
+  })],
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }

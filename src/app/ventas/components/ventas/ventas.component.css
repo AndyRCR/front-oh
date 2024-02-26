@@ -1,0 +1,55 @@
+.ventasViewContainer{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F9FBFD;
+}
+
+.ventasView{
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    padding: 0.3rem;
+    margin-top: 1.5rem;
+}
+
+.custom-fieldset {
+    border: 2px solid #8d96ac;
+    padding: 1rem 20px;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+  
+  .custom-fieldset > legend {
+    background-color: #fff;
+    margin: 0;
+    padding: 0 .5rem;
+    width: min-content;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: #869ab8;
+    position: absolute;
+    top: -10px;
+  }
+
+  .ventasHeader{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #d9e2ef;
+  }
+
+  h6{
+    color: #869ab8;
+    margin-bottom: 0.5rem;
+    font-size: 80%;
+    font-weight: 400;
+  }
+
+  h1{
+    font-weight: 400;
+    color: #001a3e;
+    font-size: 22px;
+  }

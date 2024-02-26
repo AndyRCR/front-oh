@@ -1,0 +1,22 @@
+.filterContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin: 20px 16px;
+    gap: 40px;
+}
+
+input.form-control{
+    max-width: 350px;
+}
+
+input.form-control:focus{
+    border-color: #DC3545;
+    box-shadow: none;
+}
+
+button{
+    display: flex;
+    padding: 7px 35px;
+}

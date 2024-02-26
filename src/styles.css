@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+accordion-group {
+    background-color: rgba(52, 58, 64, 0.15); /* Cambia el fondo de cada encabezado de acordeón */
+    box-shadow: 3px 0 0 0 #fb1717;
+    border-radius: 0;
+    user-select: none;
+
+    .btn-link {
+        color: rgb(6, 10, 9); /* Cambia el estilo de los botones de encabezado del acordeón */
+        text-decoration: none;
+        font-size: 14px;
+        user-select: none;
+    }
+
+    .btn-link:hover, .btn:first-child:active, .btn-link:active, .btn-link:focus-visible{
+        color: inherit;
+    }
+
+    .card-header:first-child{
+        border-radius: 0;
+    }
+
+    .panel-heading{
+        transition: .2s;
+    }
+
+    .panel-heading:hover{
+        background-color: #3d4256;
+        .btn-link {
+            color: #fff;
+        }
+    }
+
+    .panel{
+        border-radius: 0;
+    }
+
+    .panel-collapse > div {
+        font-size: 14px;
+        padding-left: 40px;
+        background-color: hsla(210, 10%, 83%, 0.10); /* Cambia el estilo del contenido expandido */
+        transition: .2s;
+    }
+
+    .panel-collapse:hover > div {
+        background-color: #3d4256;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.datatable-body-cell, .datatable-header{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.datatable-body-cell{
+    color: #6D768B;
+}
+
+.datatable-header-cell, .datatable-body-cell{
+    padding-left: 16px;
+}
+
+.datatable-header-cell{
+    font-weight: 700;
+    font-size: .68rem;
+    color: #869ab8;
+    text-transform: uppercase;
+}
+
+.ngx-datatable .datatable-body-row.datatable-row-even {
+    background-color: #f9fbfd !important;
+}
+
+.ngx-datatable .datatable-body-row{
+    transition: .1s;
+}
+
+.ngx-datatable .datatable-body-row:hover .datatable-body-cell{
+    color: #fff;
+}
+
+.ngx-datatable .datatable-body-row:hover{
+    background-color: #abbcd5!important;
+}
+
+.ngx-datatable .datatable-footer-inner{
+    padding-left: 16px;
+}
+
+.modal-dialog{
+    width: 50% !important;
+    max-width: none !important;
+}

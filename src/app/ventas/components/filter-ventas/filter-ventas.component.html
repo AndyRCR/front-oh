@@ -1,0 +1,14 @@
+<div class="filterContainer">
+    <div>Buscar por fecha:</div>
+
+    <input
+    type="text"
+    class="form-control"
+    placeholder="Seleccione una fecha"
+    [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }"
+    bsDatepicker
+    (bsValueChange)="dateHandler($event)"
+    #dp="bsDatepicker">
+
+    <button class="btn btn-danger" (click)="findResults()">Buscar</button>
+</div>

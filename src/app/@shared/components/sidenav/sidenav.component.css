@@ -1,0 +1,26 @@
+.sideNavContainer{
+    height: 100vh;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.35);
+    position: relative;
+}
+
+.sideNavLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 0 rgba(22,28,45,.05);
+}
+
+.sideNavLogo img{
+    width: 100%;
+}
+
+.sideNavHeader{
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: .6;
+    font-weight: 400;
+    padding: 1.5rem 1rem 1rem;
+}
